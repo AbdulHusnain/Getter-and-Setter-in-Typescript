@@ -1,0 +1,27 @@
+In TypeScript, getters and setters allow you to define a class member that acts like a field, but with additional behavior when it is accessed or modified.
+
+Here's an example of a simple class with a getter and a setter:
+
+class Employee {
+  private _name: string;
+
+  get name(): string {
+    return this._name;
+  }
+
+  set name(name: string) {
+    this._name = name;
+  }
+}
+
+const employee = new Employee();
+
+// Set the name using the setter
+employee.name = "John Smith";
+
+// Get the name using the getter
+console.log(employee.name);  // Output: "John Smith"
+
+In this example, the name getter and setter provide access to the private _name field. When the name property is accessed, the getter function is called, which returns the value of _name. When the name property is modified, the setter function is called, which sets the value of _name.
+
+Getters and setters are useful when you want to add additional behavior or validation when a class member is accessed or modified. For example, you could use a setter to ensure that a property is always set to a valid value, or you could use a getter to perform a calculation based on the value of a field before it is returned.
